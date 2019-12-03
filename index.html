@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change image color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <img src="images/jackie-chine-v7r8kZStqFw-unsplash.jpg" alt=""> -->
+    <img src="images/cat-2143332_1920.jpg" alt="">
+
+    <div id="bg"></div>
+
+    <script type="text/javascript">
+        const bg = document.getElementById('bg');
+        function randomColor() {
+            return Math.floor(Math.random() * 255) ;
+        }
+        console.log('rgba(' + randomColor() + ',' + randomColor() + ',' + randomColor() + ',1.0)');
+        // I don't understand How this works??
+        bg.addEventListener('click', () => {
+            bg.style.backgroundColor = 'rgba('+ randomColor() + ',' + randomColor() + ',' + randomColor() + ')';
+        });
+    </script>
+</body>
+
+</html>
